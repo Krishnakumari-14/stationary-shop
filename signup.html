@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign Up - PenPop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="product">
+
+<h2>Create Account</h2>
+
+<input id="user" type="text" placeholder="Username">
+
+<br><br>
+
+<input id="pass" type="password" placeholder="Password">
+
+<br><br>
+
+<button onclick="signup()">
+Sign Up
+</button>
+
+</div>
+
+<script>
+
+function signup(){
+
+let user=
+document.getElementById("user").value;
+
+let pass=
+document.getElementById("pass").value;
+
+localStorage.setItem("username",user);
+
+localStorage.setItem("password",pass);
+
+alert("Signup Success");
+
+window.location="login.html";
+
+}
+
+</script>
+
+</body>
+</html>

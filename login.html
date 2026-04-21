@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login - PenPop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="product">
+
+<h2>Login</h2>
+
+<input id="user" type="text" placeholder="Username">
+
+<br><br>
+
+<input id="pass" type="password" placeholder="Password">
+
+<br><br>
+
+<button onclick="login()">
+Login
+</button>
+
+</div>
+
+<script>
+
+function login(){
+
+let savedUser=
+localStorage.getItem("username");
+
+let savedPass=
+localStorage.getItem("password");
+
+let user=
+document.getElementById("user").value;
+
+let pass=
+document.getElementById("pass").value;
+
+if(
+user==savedUser &&
+pass==savedPass
+){
+alert("Login Success");
+
+window.location="products.html";
+}
+
+else{
+alert("Wrong Login");
+}
+
+}
+
+</script>
+
+</body>
+</html>
